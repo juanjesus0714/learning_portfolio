@@ -1,4 +1,4 @@
-# JavaScript_Learning
+# JavaScript Learning
 A set of different projects for learning purposes
 
 Sample change for testing git commit
