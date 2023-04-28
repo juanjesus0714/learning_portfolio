@@ -169,7 +169,7 @@ console.log(drink);
 
 console.log(`I like to drink ${age >= 18 ? "wine" : "water"}.`);*/
 
-const bill = 430;
+/*const bill = 430;
 
 const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 
@@ -177,4 +177,37 @@ console.log(tip);
 
 console.log(
   `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}.`
-);
+);*/
+
+function logger() {
+  console.log("Sample code.");
+}
+
+logger();
+
+function fruitProcessor(apples, oranges) {
+  const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+  return juice;
+}
+
+const appleJuice = fruitProcessor(5, 0);
+console.log(appleJuice);
+
+const orangeJuice = fruitProcessor(2, 4);
+console.log(orangeJuice);
+
+//function as decalration
+function calcAgeA(birthYear) {
+  return 2023 - birthYear;
+}
+
+const ageA = calcAgeA(1991);
+
+//function as expression
+const calcAgeB = function (birthYear) {
+  return 2023 - birthYear;
+};
+
+const ageB = calcAgeB(2016);
+
+console.log(ageA, ageB);
