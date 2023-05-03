@@ -179,7 +179,7 @@ console.log(
   `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}.`
 );*/
 
-function logger() {
+/*function logger() {
   console.log("Sample code.");
 }
 
@@ -196,7 +196,7 @@ console.log(appleJuice);
 const orangeJuice = fruitProcessor(2, 4);
 console.log(orangeJuice);
 
-//function as decalration
+//function as declaration
 function calcAgeA(birthYear) {
   return 2023 - birthYear;
 }
@@ -210,4 +210,20 @@ const calcAgeB = function (birthYear) {
 
 const ageB = calcAgeB(2016);
 
-console.log(ageA, ageB);
+console.log(ageA, ageB)*/
+
+//Arrow function
+const calcAgeC = (birthYear) => 2023 - birthYear;
+
+const ageC = calcAgeC(1991);
+console.log(ageC);
+
+const yearsUntilRetirement = (birthYear, firstName) => {
+  const currentAge = 2023 - birthYear;
+  const retirement = 65 - currentAge;
+  //return retirement;
+  return `${firstName} retires in ${retirement} years.`;
+};
+
+console.log(yearsUntilRetirement(1991, "Juan"));
+console.log(yearsUntilRetirement(2002, "George"));
