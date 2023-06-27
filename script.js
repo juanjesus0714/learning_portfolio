@@ -196,7 +196,7 @@ console.log(appleJuice);
 const orangeJuice = fruitProcessor(2, 4);
 console.log(orangeJuice);
 
-//function as decalration
+//function as declaration
 function calcAgeA(birthYear) {
   return 2023 - birthYear;
 }
