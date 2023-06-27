@@ -179,7 +179,7 @@ console.log(
   `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}.`
 );*/
 
-function logger() {
+/*function logger() {
   console.log("Sample code.");
 }
 
@@ -210,4 +210,66 @@ const calcAgeB = function (birthYear) {
 
 const ageB = calcAgeB(2016);
 
-console.log(ageA, ageB);
+console.log(ageA, ageB);*/
+
+//Arrow function
+/*const calcAgeC = (birthYear) => 2023 - birthYear;
+const ageC = calcAgeC(1991);
+console.log(ageC);
+
+const yearsUntilRetirement = (birthYear) => {
+  const age = 2023 - birthYear;
+  const retirement = 65 - age;
+  return retirement;
+};
+
+console.log(yearsUntilRetirement(1991));*/
+
+/*const cutPieces = (fruit) => fruit * 4;
+
+const fruitProcessor = function (apples, oranges) {
+  const applePieces = cutPieces(apples);
+  const orangePieces = cutPieces(oranges);
+  const juice = `Juice with ${applePieces} apple pieces and ${orangePieces} orange slices.`;
+  return juice;
+};
+
+console.log(fruitProcessor(2, 3));*/
+
+/*const calcAge = (birthYear) => 2023 - birthYear;
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+  if (retirement <= 0) {
+    return `${firstName} has already retired!`;
+  } else {
+    return `${firstName} retires in ${retirement} years.`;
+  }
+};
+
+console.log(yearsUntilRetirement(1991, "Juan"));*/
+
+const calcAverage = (scoreA, scoreB, scoreC) => (scoreA + scoreB + scoreC) / 3;
+
+//Test Data 1
+let scoreDolphins = calcAverage(44, 23, 71);
+let scoreKoalas = calcAverage(65, 54, 49);
+console.log(scoreDolphins, scoreKoalas);
+
+const checkWinner = function (avgDolphins, avgKoalas) {
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas}).`);
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins}).`);
+  } else {
+    console.log(`No team wins...`);
+  }
+};
+checkWinner(scoreDolphins, scoreKoalas);
+
+//Test Data 2
+scoreDolphins = calcAverage(85, 54, 41);
+scoreKoalas = calcAverage(23, 34, 27);
+console.log(scoreDolphins, scoreKoalas);
+checkWinner(scoreDolphins, scoreKoalas);
