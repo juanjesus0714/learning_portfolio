@@ -210,39 +210,66 @@ const calcAgeB = function (birthYear) {
 
 const ageB = calcAgeB(2016);
 
-console.log(ageA, ageB)*/
+console.log(ageA, ageB);*/
 
 //Arrow function
-const calcAgeC = (birthYear) => 2024 - birthYear;
-
+/*const calcAgeC = (birthYear) => 2023 - birthYear;
 const ageC = calcAgeC(1991);
 console.log(ageC);
 
-const yearsUntilRetirement = (birthYear, firstName) => {
-  const currentAge = 2024 - birthYear;
-  const retirement = 65 - currentAge;
-  //return retirement;
-  return `${firstName} retires in ${retirement} years.`;
+const yearsUntilRetirement = (birthYear) => {
+  const age = 2023 - birthYear;
+  const retirement = 65 - age;
+  return retirement;
 };
 
-console.log(yearsUntilRetirement(1991, "Juan"));
-console.log(yearsUntilRetirement(2002, "George"));
+console.log(yearsUntilRetirement(1991));*/
 
-const friend1 = "Michael";
-const friend2 = "George";
-const friend3 = "Louis";
+/*const cutPieces = (fruit) => fruit * 4;
 
-const friends = [friend1, friend2, friend3];
-console.log(friends);
-
-const friends2 = new Array(friend1, friend2, friend3);
-console.log(friends2[0]);
-console.log(friends2[2]);
-
-const calcAgeAD = function (birthYear) {
-  return 2024 - birthYear;
+const fruitProcessor = function (apples, oranges) {
+  const applePieces = cutPieces(apples);
+  const orangePieces = cutPieces(oranges);
+  const juice = `Juice with ${applePieces} apple pieces and ${orangePieces} orange slices.`;
+  return juice;
 };
 
-const yearsArray = [1991, 1967, 2002, 2010, 2016];
+console.log(fruitProcessor(2, 3));*/
 
-console.log(calcAgeAD(yearsArray[yearsArray.length - 1]));
+/*const calcAge = (birthYear) => 2023 - birthYear;
+
+const yearsUntilRetirement = function (birthYear, firstName) {
+  const age = calcAge(birthYear);
+  const retirement = 65 - age;
+  if (retirement <= 0) {
+    return `${firstName} has already retired!`;
+  } else {
+    return `${firstName} retires in ${retirement} years.`;
+  }
+};
+
+console.log(yearsUntilRetirement(1991, "Juan"));*/
+
+const calcAverage = (scoreA, scoreB, scoreC) => (scoreA + scoreB + scoreC) / 3;
+
+//Test Data 1
+let scoreDolphins = calcAverage(44, 23, 71);
+let scoreKoalas = calcAverage(65, 54, 49);
+console.log(scoreDolphins, scoreKoalas);
+
+const checkWinner = function (avgDolphins, avgKoalas) {
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas}).`);
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins}).`);
+  } else {
+    console.log(`No team wins...`);
+  }
+};
+checkWinner(scoreDolphins, scoreKoalas);
+
+//Test Data 2
+scoreDolphins = calcAverage(85, 54, 41);
+scoreKoalas = calcAverage(23, 34, 27);
+console.log(scoreDolphins, scoreKoalas);
+checkWinner(scoreDolphins, scoreKoalas);
