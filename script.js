@@ -213,13 +213,13 @@ const ageB = calcAgeB(2016);
 console.log(ageA, ageB)*/
 
 //Arrow function
-const calcAgeC = (birthYear) => 2023 - birthYear;
+const calcAgeC = (birthYear) => 2024 - birthYear;
 
 const ageC = calcAgeC(1991);
 console.log(ageC);
 
 const yearsUntilRetirement = (birthYear, firstName) => {
-  const currentAge = 2023 - birthYear;
+  const currentAge = 2024 - birthYear;
   const retirement = 65 - currentAge;
   //return retirement;
   return `${firstName} retires in ${retirement} years.`;
@@ -227,3 +227,22 @@ const yearsUntilRetirement = (birthYear, firstName) => {
 
 console.log(yearsUntilRetirement(1991, "Juan"));
 console.log(yearsUntilRetirement(2002, "George"));
+
+const friend1 = "Michael";
+const friend2 = "George";
+const friend3 = "Louis";
+
+const friends = [friend1, friend2, friend3];
+console.log(friends);
+
+const friends2 = new Array(friend1, friend2, friend3);
+console.log(friends2[0]);
+console.log(friends2[2]);
+
+const calcAgeAD = function (birthYear) {
+  return 2024 - birthYear;
+};
+
+const yearsArray = [1991, 1967, 2002, 2010, 2016];
+
+console.log(calcAgeAD(yearsArray[yearsArray.length - 1]));
